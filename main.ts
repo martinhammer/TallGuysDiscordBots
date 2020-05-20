@@ -60,3 +60,13 @@ commands.raw('alien', (message) => {
   foo += '  ---" "---   ```\n';
   message.reply(foo);
 });
+
+commands.raw('d20', (message) => {
+  var result = Math.floor(Math.random() * 20 + 1);
+  message.reply('You rolled ' + result);
+});
+
+commands.raw('d6', (message) => {
+  var result = Math.floor(Math.random() * 6 + 1);
+  message.reply('You rolled ' + result);
+});
